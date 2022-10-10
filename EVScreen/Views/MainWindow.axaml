@@ -1,0 +1,56 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:EVScreen.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="EVScreen.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="EVScreen">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+	
+	<Window.Styles>
+		<Style Selector="Window">
+			<Setter Property="Background" Value="#242732" />
+		</Style>
+		<Style Selector="TextBlock">
+			<Setter Property="Foreground" Value="#645259" />
+		</Style>
+	</Window.Styles>
+	<Grid RowDefinitions="*, *, *" ColumnDefinitions="*, *, *" ShowGridLines="True">
+		<Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*, *" Margin="-70, 0, 0, 0" ShowGridLines="False">
+			<TextBlock Text="2.9 D" FontSize="16"
+					   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+					   HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+		
+			<Image Source="/Assets/4.png" 
+				   Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+		
+			<TextBlock Text="F" FontSize="32"
+					   Padding="0, 0, 0, 0"
+					   Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2"
+					   VerticalAlignment="Center" HorizontalAlignment="Center" />
+						 
+			<TextBlock Text="100.000 CR" FontSize="16"
+					   Padding="40, 0, 0, 0"
+					   Grid.Row="1" Grid.Column="1" 
+					   VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+		
+			<TextBlock Text="840 mil years" FontSize="16"
+					   Padding="50, 2, 0, 0"
+					   Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+		
+			<TextBlock Text="Scoopable" FontSize="16"
+					   Padding="40, 0, 0, 0"
+					   Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+
+			<TextBlock Text="Aeternitas" FontSize="24"
+					   Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" 
+					   VerticalAlignment="Center" HorizontalAlignment="Center" />
+		</Grid>
+	</Grid>
+
+</Window>
